@@ -6,6 +6,7 @@
 package animaleshilos;
 
 import java.awt.GridLayout;
+import java.awt.Label;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import javax.swing.ImageIcon;
@@ -24,7 +25,7 @@ public class Carrera extends JFrame {
     JLabel[] Labels;
     String[] nombres = {"conejo","tortuga","Zorro"};
     JButton boton;
-    int ancho = 400;
+    int ancho = 700;
     
     // Constructor
     public Carrera (){
@@ -50,7 +51,15 @@ public class Carrera extends JFrame {
 
             @Override
             public void actionPerformed(ActionEvent e) {
-           System.out.println("La Carrera Va a Empezar");
+                Animal conejo = new Animal ("conejo", ancho -40, Labels[0]);
+                Animal tortuga = new Animal ("tortuga", ancho -40, Labels[1]);
+                Animal Zorro = new Animal ("Zorro", ancho -40, Labels[2]);
+                
+                conejo.start();
+                tortuga.start();
+                Zorro.start();
+
+//System.out.println("La Carrera Va a Empezar");
                 
                 // throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
             }
@@ -61,7 +70,7 @@ public class Carrera extends JFrame {
         
         setDefaultCloseOperation(EXIT_ON_CLOSE);
         setLocation(200,250);
-        setSize(ancho,250);
+        setSize(ancho,450);
         setVisible(true);
         
     }

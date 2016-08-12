@@ -5,6 +5,11 @@
  */
 package animaleshilos;
 
+import java.util.logging.Level;
+import java.util.logging.Logger;
+import javax.swing.JLabel;
+import javax.swing.JOptionPane;
+
 /**
  *
  * @author Cesar Gonzalez Salas
@@ -18,12 +23,15 @@ public class Animal extends Thread{
     
     String nombre;
     int Limite;
+    JLabel Label;
     
     
 // Constructor
-    public Animal(String nombre, int Limite){
+    public Animal(String nombre, int Limite, JLabel Label){
     this.nombre = nombre;
     this.Limite = Limite;
+    this.Label = Label;
+    
     
        
     }
@@ -35,11 +43,19 @@ public class Animal extends Thread{
     public void run (){
     
         for (int n = 0; n < Limite; n++){
-        System.out.println(nombre +" Avanza ");
+            try {
+                System.out.println(nombre +" Avanza ");
+                Label.setLocation(n,0);
+                Thread.sleep(20);
+            } catch (InterruptedException ex) {
+                Logger.getLogger(Animal.class.getName()).log(Level.SEVERE, null, ex);
+            }
         
-                
+        
         }
     
+        JOptionPane.showMessageDialog(null, nombre + " Ha llegado A la Meta ");
+        
     
     yield();
     
