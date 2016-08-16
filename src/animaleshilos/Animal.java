@@ -14,13 +14,9 @@ import javax.swing.JOptionPane;
  *
  * @author Cesar Gonzalez Salas
  */
-
-
-
-//Clase donde va el animal o hilo
  
 public class Animal extends Thread{
-    
+//Clase donde va el animal o hilo    
     String nombre;
     int Limite;
     JLabel Label;
@@ -28,16 +24,13 @@ public class Animal extends Thread{
     
 // Constructor
     public Animal(String nombre, int Limite, JLabel Label){
+// Asignacion de los parametros
     this.nombre = nombre;
     this.Limite = Limite;
     this.Label = Label;
-    
-    
        
     }
-        
-    
-    // definicion de los metodos 
+ // definicion de los metodos 
     
     @Override
     public void run (){

@@ -5,6 +5,7 @@
  */
 package animaleshilos;
 
+// Importaciones
 import java.awt.GridLayout;
 import java.awt.Label;
 import java.awt.event.ActionEvent;
@@ -17,18 +18,23 @@ import javax.swing.JPanel;
 
 /**
  *
- * @author treznor
+ * @author Cesar Gonzalez Salas
  */
+
 public class Carrera extends JFrame {
-    
+// Crea el Frrame Botones, Labes y Coloca Los Nombres    
     JPanel[] paneles;
     JLabel[] Labels;
     String[] nombres = {"conejo","tortuga","Zorro"};
     JButton boton;
+// Limita El Ancho del Fraame 
     int ancho = 700;
-    
-    // Constructor
-    public Carrera (){
+
+    /**
+ *
+ * Constructor De La Carrera
+ */
+public Carrera (){
         
         setLayout(new GridLayout(0,1));
        
