@@ -15,6 +15,7 @@ import javax.swing.JButton;
 import javax.swing.JFrame;
 import javax.swing.JLabel;
 import javax.swing.JPanel;
+import javax.swing.Timer;
 
 /**
  *
@@ -28,7 +29,7 @@ public class Carrera extends JFrame {
     String[] nombres = {"conejo","tortuga","Zorro"};
     JButton boton;
 // Limita El Ancho del Fraame 
-    int ancho = 700;
+    int ancho = 900;
 
     /**
  *
@@ -46,7 +47,7 @@ public Carrera (){
             paneles[n] = new JPanel();
              add(paneles[n]);
              Labels[n] = new JLabel(nombres[n]);
-             Labels[n].setIcon(new ImageIcon(getClass().getResource(nombres[n]+ ".jpg"))); 
+           //Labels[n].setIcon(new ImageIcon(getClass().getResource(nombres[n]+ ".jpg"))); 
              paneles[n].add(Labels[n]);
              Labels[n].setLocation(0,0);
              
@@ -65,7 +66,7 @@ public Carrera (){
                 tortuga.start();
                 Zorro.start();
 
-//System.out.println("La Carrera Va a Empezar");
+                //System.out.println("La Carrera Va a Empezar");
                 
                 // throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
             }
@@ -87,6 +88,4 @@ public Carrera (){
      
      
      }
-     
-    
 }
